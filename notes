@@ -1,0 +1,36 @@
+ NOTES for JS
+1. for json data you send only string...
+2. search for cors errors they are occured when client and server are on different port
+   so we use header which tells to allow .. we put header to every request put it before routes i.e sending response
+3. when you have only one arguement you dont neet to put paranthesis for the funtion but for 0 or more it does
+4. when you have just one line function and it returns a value remove return and curly
+5. const multiply = number => number*2 returns the double of the number
+6. you can also import/export more than one module from a file
+7. default gives only one single export. when export more you need exact name in curly braces
+  7.1. import {baseData} from './utility.js'
+  7.2. import {clean} from './utility.js'
+  BOTH ARE EXPORTED FROM UTILITY JS AND HAVE SAME NAME IN UTILITY.JS
+  or import {data as baseData} from './utility.js'
+  or import * as bundled from './utility.js' // import all the modules as an object
+8. spread method is ... which adds elements from old array to new array
+  8.1 const newArr=[...oldArray,1,2];
+  8.2 const newObj={...oldObj, newProps: 5};
+9. same as rest .. used to merge list of function arguement into an array
+  9.1 function sortArgs(...args){
+  return args.sort();
+  }
+10. Destructuring extracts array elements or object properties and store them in variables (photos taken)
+  10.1 ARRAY Destructuring
+  10.2 Object Destructuring
+11. nos,bool,const n all is primitive type(creates copy of vaue). Object and array are reference type
+12. see array methods like map online. it makes a copy though 
+13. like web app we cant make a session as some mobile app cant maintain a session 
+    instead we return a token. it is a obj that contains sign if its a valid token and info of logged in user
+    this can be stored by client and be used in future. we also verify the token to know if its not altered
+    It is a json web token = json data(Generally not Encrypted) + Signature(can be verified)
+14. we use nodejs web token it is jsonwebtoken (JWT)
+
+***** ONE AWESOME APPROACH TOLD IN THIS VIDEO THAT IS THAT IF YOU WANT TO CREATE ROLES FOR THE user
+YOU CAN MAKE A NORMAL USER AND ASSIGN ROLES LIKE WHO CAN ACCEPT ORDER OR WHO CAN DELET ANTHER USER ***
+
+    
